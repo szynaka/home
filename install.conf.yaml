@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+      relative: true
+
+- clean: []
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
