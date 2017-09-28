@@ -10,3 +10,6 @@
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "vim/bundle/jinja"]
+	path = vim/bundle/jinja
+	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
