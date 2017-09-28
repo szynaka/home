@@ -106,6 +106,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
+alias noretry="find . -name '*.retry' -delete"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -123,3 +124,10 @@ if ! shopt -oq posix; then
 fi
 
 export SSLKEYLOGFILE=~/tmp/sslkeylog.log
+
+# Disable systemctl auto-paging feature
+export SYSTEMD_PAGER=
+
+# Ansible config overrides
+export ANSIBLE_ASK_PASS=False
+export ANSIBLE_RETRY_FILES_ENABLED=False
