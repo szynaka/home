@@ -80,14 +80,14 @@ endfunction
 command -nargs=+ MapToggle  call MapToggle(<f-args>)
 
 " Display-altering option toggles
-MapToggle <F1> hlsearch
-MapToggle <F2> wrap
-MapToggle <F3> list
+"MapToggle <F1> hlsearch
+"MapToggle <F2> wrap
+"MapToggle <F3> list
 
 " Behavior-altering option toggles
-MapToggle <F10> scrollbind
-MapToggle <F11> ignorecase
-MapToggle <F12> paste
+"MapToggle <F10> scrollbind
+"MapToggle <F11> ignorecase
+"MapToggle <F12> paste
 set pastetoggle=<F12>
 
 " display current file in two columns
