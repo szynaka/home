@@ -22,7 +22,7 @@ if [ ! -S /tmp/ssh-agent-$USER-screen ]; then
 fi
 
 echo pass
-if [ ! -z $(which screen) -a "$TERM" != "screen" ]; then
+if [ ! -z "$(which screen 2>/dev/null)" -a "$TERM" != "screen" ]; then
     screen -xRR
 else
     # include .bashrc if it exists
