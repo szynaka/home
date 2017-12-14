@@ -1,4 +1,4 @@
 ```
-git clone git@github.com:szynaka/home.git ~/.home
+git clone https://github.com/szynaka/home.git ~/.home
 ~/.home/install
 ```
