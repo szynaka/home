@@ -21,7 +21,6 @@ if [ ! -S /tmp/ssh-agent-$USER-screen ]; then
     fi
 fi
 
-echo pass
 if [ ! -z "$(which screen 2>/dev/null)" -a "$TERM" != "screen" ]; then
     screen -xRR
 else
