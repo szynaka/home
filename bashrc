@@ -79,6 +79,7 @@ xterm*|rxvt*)
 esac
 
 # Override all the prompt stuff above with liquidprompt
+export LP_ENABLE_SHORTEN_PATH=0
 [[ $- = *i* ]] && source ~/.home/liquidprompt/liquidprompt
 
 # enable color support of ls and also add handy aliases
