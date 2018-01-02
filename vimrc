@@ -5,22 +5,22 @@ execute pathogen#infect()
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=indent,eol,start	" more powerful backspacing
+set nocompatible                " Use Vim defaults instead of 100% vi compatibility
+set backspace=indent,eol,start  " more powerful backspacing
 
 " Now we set some defaults for the editor 
-set autoindent		" always set autoindenting on
-set tabstop=4		" 4 space tab stops
-set shiftwidth=4    " 4 spaces for indentations
-set expandtab		" tabs really look like 4 spaces
-set softtabstop=4	" BS 4 spaces like a tab
-set textwidth=0		" Don't wrap words by default
-set nobackup		" Don't keep a backup file
-set viminfo='20,\"50	" read/write a .viminfo file, don't store more than
-			" 50 lines of registers
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-" set textwidth=78    " Set right margin to 78 columns
+set autoindent          " always set autoindenting on
+set tabstop=4           " 4 space tab stops
+set shiftwidth=4        " 4 spaces for indentations
+set expandtab           " tabs really look like 4 spaces
+set softtabstop=4       " BS 4 spaces like a tab
+set textwidth=0         " Don't wrap words by default
+set nobackup            " Don't keep a backup file
+set viminfo='20,\"50    " read/write a .viminfo file, don't store more than
+                        " 50 lines of registers
+set history=50          " keep 50 lines of command line history
+set ruler               " show the cursor position all the time
+" set textwidth=78       " Set right margin to 78 columns
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
@@ -53,21 +53,26 @@ if has("autocmd")
  " Set yaml files to have indentation of 2
  autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-endif " has ("autocmd")
+  " Disable RedHat cursor position
+  augroup redhat
+    autocmd! BufReadPost *
+  augroup END
 
-" Some Debian-specific things
-augroup filetype
-  au BufRead reportbug.*		set ft=mail
-  au BufRead reportbug-*		set ft=mail
-augroup END
+  " Some Debian-specific things
+  augroup filetype
+    au BufRead reportbug.*  set ft=mail
+    au BufRead reportbug-*  set ft=mail
+  augroup END
+
+endif " has ("autocmd")
 
 " The following are commented out as they cause vim to behave a lot
 " different from regular vi. They are highly recommended though.
-set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set incsearch		" Incremental search
-"set autowrite		" Automatically save before commands like :next and :make
+set showcmd     " Show (partial) command in status line.
+set showmatch   " Show matching brackets.
+set ignorecase  " Do case insensitive matching
+set incsearch   " Incremental search
+"set autowrite   " Automatically save before commands like :next and :make
 colorscheme elflord
 " colorscheme evening
 
