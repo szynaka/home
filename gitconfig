@@ -1,0 +1,7 @@
+[user]
+	name = Ed Szynaka
+	email = szynaka@buffalo.edu
+[push]
+	default = simple
+[core]
+	excludesfile = $HOME/.gitignore

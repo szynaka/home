@@ -12,6 +12,8 @@
     ~/.bash_profile: bash_profile
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.gitignore: gitignore
+    ~/.gitconfig: gitconfig
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
