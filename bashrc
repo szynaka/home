@@ -135,3 +135,8 @@ export SYSTEMD_PAGER=
 # Ansible config overrides
 export ANSIBLE_ASK_PASS=False
 export ANSIBLE_RETRY_FILES_ENABLED=False
+
+# Local additions to bashrc
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
