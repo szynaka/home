@@ -1,7 +1,7 @@
 " Configuration file for vim
 
 " Startup pathogen for easy plugin setup
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
