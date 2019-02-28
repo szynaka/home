@@ -16,6 +16,6 @@
 [submodule "vim/bundle/ansible-vim"]
 	path = vim/bundle/ansible-vim
 	url = https://github.com/pearofducks/ansible-vim
-[submodule "pack/tml/start"]
-	path = pack/tml/start
+[submodule "vim/pack/tml/start"]
+	path = vim/pack/tml/start
 	url = https://github.com/tomtom/tcomment_vim
