@@ -10,7 +10,7 @@ esac
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/bin ] ; then
-    PATH=~/bin:"${PATH}"
+    PATH=~/bin:~/.local/bin:"${PATH}"
 fi
     
 # don't put duplicate lines or lines starting with space in the history.
@@ -100,7 +100,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Ansible alias for vault
-alias ansible-playbook='ansible-playbook --vault-id vpass'
+alias ansible-playbook='ansible-playbook --vault-id ~/.ansible_vault_pass'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -136,9 +136,9 @@ export SYSTEMD_PAGER=
 export ANSIBLE_ASK_PASS=False
 export ANSIBLE_RETRY_FILES_ENABLED=False
 
-# Python vittualenv auto activation
-function cd() {
-  builtin cd "$@"
+# Python vittualenv activation
+function activate() {
+#  builtin cd "$@"
 
   if [[ -z "$VIRTUAL_ENV" ]] ; then
       ## If env folder is found then activate the vitualenv
@@ -150,13 +150,14 @@ function cd() {
         fi
       fi
   else
+      echo "There's also a virtualenv active"
       ## check the current folder belong to earlier VIRTUAL_ENV folder
       # if yes then do nothing
       # else deactivate
-      parentdir="$(dirname "$VIRTUAL_ENV")"
-      if [[ "$PWD"/ != "$parentdir"/* ]] ; then
-        deactivate
-      fi
+      #parentdir="$(dirname "$VIRTUAL_ENV")"
+      #if [[ "$PWD"/ != "$parentdir"/* ]] ; then
+      #  deactivate
+      #fi
   fi
 }
 
