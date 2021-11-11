@@ -561,10 +561,6 @@ Session.vim
 pyvenv.cfg
 pip-selfcheck.json
 
-### VisualStudioCode.gitignore
-.vscode
-
-
 ### WebMethods.gitignore
 **/IntegrationServer/datastore/
 **/IntegrationServer/db/
