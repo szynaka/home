@@ -164,6 +164,10 @@ function activate() {
   fi
 }
 
+if [[ -d $HOME/perl5/lib/perl5 ]]; then
+    eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
+fi
+
 # Local additions to bashrc
 if [ -f ~/.bashrc.local ]; then
     . ~/.bashrc.local
