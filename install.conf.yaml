@@ -15,6 +15,7 @@
     ~/.gitignore: gitignore
     ~/.gitconfig: gitconfig
     ~/.screenrc: screenrc
+    ~/.liquidpromptrc: liquidpromptrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
