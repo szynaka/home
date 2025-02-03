@@ -128,8 +128,8 @@ if ! shopt -oq posix; then
 fi
 
 export SSLKEYLOGFILE=~/tmp/sslkeylog.log
-if [[ ! -f ~/tmp ]]; then
-    mkdir ~/tmp
+if [[ ! -d ${HOME}/tmp ]]; then
+    mkdir ${HOME}/tmp
 fi
 
 # Disable systemctl auto-paging feature
