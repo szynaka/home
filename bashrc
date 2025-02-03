@@ -79,7 +79,7 @@ xterm*|rxvt*)
 esac
 
 # Override all the prompt stuff above with liquidprompt
-export LP_ENABLE_SHORTEN_PATH=0
+#export LP_ENABLE_SHORTEN_PATH=0 # Migrated to .liquidpromptrc
 [[ $- = *i* ]] && source ~/.home/liquidprompt/liquidprompt
 
 # enable color support of ls and also add handy aliases
@@ -104,13 +104,13 @@ alias ansible-playbook='ansible-playbook --vault-id ~/.ansible_vault_pass'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-alias noretry="find . -name '*.retry' -delete"
+#alias noretry="find . -name '*.retry' -delete"
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
